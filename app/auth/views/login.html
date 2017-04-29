@@ -1,0 +1,23 @@
+<!--<div class="ways">-->
+    <!--<a class="facebook" href="#" ng-click="auth.oAuthLogin('facebook')">Sign in with Facebook</a>-->
+    <!--<a class="google" href="#" ng-click="auth.oAuthLogin('google')">Sign in with Google</a>-->
+<!--</div>-->
+
+<form ng-submit="auth.login(auth.user)">
+
+    <label>
+        <input type="text" ng-model="auth.user.email" placeholder="Email Address" required/>
+    </label>
+
+    <label>
+        <input type="password" ng-model="auth.user.password" placeholder="Password" required/>
+    </label>
+
+    <button type="submit">Sign In</button>
+</form>
+
+<p>
+    <a ui-sref="auth.resetpassword">Forgot your password?</a> <br />
+    <span ng-if="!hideFromBeta">Don't have an account? <a ui-sref="auth.signup">Sign up here!</a></span>
+    <span ng-if="hideFromBeta">Access is currently limited to Premium users</span>
+</p>

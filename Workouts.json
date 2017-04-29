@@ -1,0 +1,611 @@
+{
+  "id": 3,
+  "name": "coreExercise",
+  "icon": "coreExercise.png",
+  "description": "CORE_DESC",
+  "break": {
+    "name": "30 Second Break",
+    "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/restbreak.mp4",
+    "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Break.mp3",
+    "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/restbreak.jpg"
+  },
+  "image": "https://s3.amazonaws.com/m.sworkit.com/assets/workouts/images/small/coreExercise.png",
+  "prettyName": "Core Exercise",
+  "activityWeight": 6,
+  "activityMFP": "134026252709869",
+  "activityNames": "CORE",
+  "isYogaSequence": false,
+  "defaultExerciseLength": 30,
+  "exercises": [
+    {
+      "id": 11,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/situps.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Situps.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/situps.mp4",
+      "category": "core",
+      "name": "Sit-up",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 12,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/vsitups.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/VSitups.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/vsitups.mp4",
+      "category": "core",
+      "name": "V Sit-up",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 13,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/elevatedcrunches.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Crunches.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/elevatedcrunches.mp4",
+      "category": "core",
+      "name": "Elevated Crunches",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 14,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/legspreaders.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/LegSpreaders.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/legspreaders.mp4",
+      "category": "core",
+      "name": "Leg Spreaders",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 15,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/leglifts.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/LegLifts.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/leglifts.mp4",
+      "category": "core",
+      "name": "Leg Lifts",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 16,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/supinebicycle.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/SupineBicycle.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/supinebicycle.mp4",
+      "category": "core",
+      "name": "Supine Bicycle",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 17,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/plank.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Plank1.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/plank.mp4",
+      "category": "core",
+      "name": "Plank",
+      "videoTiming": [
+        3200,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 18,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/burpees.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Burpees.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/burpees.mp4",
+      "category": "core",
+      "name": "Burpees",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 20,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/twistingcrunches.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/TwistingCrunches.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/twistingcrunches.mp4",
+      "category": "core",
+      "name": "Twisting Crunches",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 23,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/inchworms.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/InchWorms.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/inchworms.mp4",
+      "category": "core",
+      "name": "Inch Worms",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 25,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/supermans.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Supermans.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/supermans.mp4",
+      "category": "core",
+      "name": "Supermans",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 59,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/windmill.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Windmill.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/windmill.mp4",
+      "category": "core",
+      "name": "Windmill",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 60,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/bentlegtwist.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/BentLegTwist.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/bentlegtwist.mp4",
+      "category": "core",
+      "name": "Bent Leg Twist",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 61,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/sidebridge.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/SideBridge.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/sidebridge.mp4",
+      "category": "core",
+      "name": "Side Bridge",
+      "videoTiming": [
+        3400,
+        7600
+      ],
+      "switchOption": true,
+      "isPushup": false
+    },
+    {
+      "id": 62,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/quadraplex.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Quadraplex.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/quadraplex.mp4",
+      "category": "back",
+      "name": "Quadraplex",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 89,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/swimmer.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/swimmer.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/swimmer.mp4",
+      "category": "core",
+      "name": "Swimmer",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 95,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/masontwist.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/masonTwist.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/masontwist.mp4",
+      "category": "core",
+      "name": "Mason Twist",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 96,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/steamengine.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/steamEngine.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/steamengine.mp4",
+      "category": "core",
+      "name": "Steam Engine",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 97,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/inandoutabs.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/inOutAbs.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/inandoutabs.mp4",
+      "category": "core",
+      "name": "In and Out Abs",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 98,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/sixinchesandhold.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/sixInch.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/sixinchesandhold.mp4",
+      "category": "core",
+      "name": "Six Inch and Hold",
+      "videoTiming": [
+        100,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 107,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/scissorkicks.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/ScissorKicks.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/scissorkicks.mp4",
+      "category": "core",
+      "name": "Scissor Kicks",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    }
+  ],
+  "shuffledExercises": [
+    {
+      "id": 18,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/burpees.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Burpees.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/burpees.mp4",
+      "category": "core",
+      "name": "Burpees",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 61,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/sidebridge.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/SideBridge.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/sidebridge.mp4",
+      "category": "core",
+      "name": "Side Bridge",
+      "videoTiming": [
+        3400,
+        7600
+      ],
+      "switchOption": true,
+      "isPushup": false
+    },
+    {
+      "id": 60,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/bentlegtwist.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/BentLegTwist.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/bentlegtwist.mp4",
+      "category": "core",
+      "name": "Bent Leg Twist",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 59,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/windmill.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Windmill.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/windmill.mp4",
+      "category": "core",
+      "name": "Windmill",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 16,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/supinebicycle.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/SupineBicycle.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/supinebicycle.mp4",
+      "category": "core",
+      "name": "Supine Bicycle",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 14,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/legspreaders.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/LegSpreaders.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/legspreaders.mp4",
+      "category": "core",
+      "name": "Leg Spreaders",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 95,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/masontwist.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/masonTwist.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/masontwist.mp4",
+      "category": "core",
+      "name": "Mason Twist",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 20,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/twistingcrunches.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/TwistingCrunches.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/twistingcrunches.mp4",
+      "category": "core",
+      "name": "Twisting Crunches",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 62,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/quadraplex.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Quadraplex.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/quadraplex.mp4",
+      "category": "back",
+      "name": "Quadraplex",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 17,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/plank.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Plank1.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/plank.mp4",
+      "category": "core",
+      "name": "Plank",
+      "videoTiming": [
+        3200,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 107,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/scissorkicks.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/ScissorKicks.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/scissorkicks.mp4",
+      "category": "core",
+      "name": "Scissor Kicks",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 25,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/supermans.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Supermans.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/supermans.mp4",
+      "category": "core",
+      "name": "Supermans",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 97,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/inandoutabs.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/inOutAbs.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/inandoutabs.mp4",
+      "category": "core",
+      "name": "In and Out Abs",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 11,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/situps.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Situps.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/situps.mp4",
+      "category": "core",
+      "name": "Sit-up",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 89,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/swimmer.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/swimmer.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/swimmer.mp4",
+      "category": "core",
+      "name": "Swimmer",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 23,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/inchworms.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/InchWorms.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/inchworms.mp4",
+      "category": "core",
+      "name": "Inch Worms",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 98,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/sixinchesandhold.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/sixInch.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/sixinchesandhold.mp4",
+      "category": "core",
+      "name": "Six Inch and Hold",
+      "videoTiming": [
+        100,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 13,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/elevatedcrunches.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Crunches.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/elevatedcrunches.mp4",
+      "category": "core",
+      "name": "Elevated Crunches",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 12,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/vsitups.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/VSitups.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/vsitups.mp4",
+      "category": "core",
+      "name": "V Sit-up",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 96,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/steamengine.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/steamEngine.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/steamengine.mp4",
+      "category": "core",
+      "name": "Steam Engine",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    },
+    {
+      "id": 15,
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/leglifts.jpg",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/LegLifts.mp3",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/leglifts.mp4",
+      "category": "core",
+      "name": "Leg Lifts",
+      "videoTiming": [
+        false,
+        false
+      ],
+      "switchOption": false,
+      "isPushup": false
+    }
+  ]
+}

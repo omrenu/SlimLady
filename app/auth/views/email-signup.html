@@ -1,0 +1,39 @@
+<form ng-submit="auth.signup(signupForm, auth.signupData)" name="signupForm" novalidate>
+
+    <label ng-class="{ 'has-error' : signupForm.firstName.$invalid && !signupForm.firstName.$submitted }">
+        <span>First Name</span>
+        <input type="text" name="firstName" ng-model="auth.signupData.firstName" placeholder="First Name" required />
+    </label>
+
+    <label ng-class="{ 'has-error' : signupForm.lastName.$invalid && !signupForm.lastName.$submitted}">
+        <span>Last Name</span>
+        <input type="text" name="lastName" ng-model="auth.signupData.lastName" placeholder="Last Name" required />
+    </label>
+
+    <label ng-class="{ 'has-error' : signupForm.email.$invalid && !signupForm.email.$submitted }">
+        <span>Email Address</span>
+        <input name="email" type="email" ng-model="auth.signupData.email" placeholder="Email Address" required />
+    </label>
+
+    <label ng-class="{ 'has-error' : signupForm.password.$invalid && !signupForm.password.$submitted }">
+        <span>Password</span>
+        <input name="password" type="password" ng-model="auth.signupData.password" ng-model-options="{ updateOn: 'blur' }" placeholder="Password should be 8 characters" pattern=".{8,}" required />
+    </label>
+
+    <label ng-class="{ 'has-error' : signupForm.passwordCheck.$invalid && !signupForm.passwordCheck.$submitted }">
+        <span>Confirm Password</span>
+        <input name="passwordCheck" type="password" ng-model="auth.signupData.passwordConfirmation" placeholder="Confirm Password" wj-validation-error="auth.signupData.passwordConfirmation != auth.signupData.password ? 'Passwords don\'t match' : ''" required />
+    </label>
+
+    <p ng-show="signupForm.passwordCheck.$invalid && !signupForm.passwordCheck.$pristine" class="help-block">Sorry, the passwords don't match.</p>
+
+    <button type="submit" ng-disabled="signupForm.$invalid">Sign Up</button>
+</form>
+
+<p>
+    By signing up, you agree to Sworkit's <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>.
+</p>
+
+<hr>
+
+<a class="alone" ui-sref="auth.login">Already have an account? Sign in here.</a>

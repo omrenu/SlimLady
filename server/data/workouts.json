@@ -1,0 +1,350 @@
+[
+  {
+    "catid": 1,
+    "catName": "chest",
+    "break": {
+      "name": "30 Second Break",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/restbreak.mp4",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Break.mp3",
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/restbreak.jpg"
+    },
+    "workouts": [
+      {
+        "id": "chest_1",
+        "name": "normal-Pushups",
+        "icon": "normal-Pushups.png",
+        "description": "NORMAL-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/normal-Pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/normal-Pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/normal-Pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_2",
+        "name": "hands-wide-pushups",
+        "icon": "hands-wide-pushups.png",
+        "description": "HANDS-WIDE-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/hands-wide-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/hands-wide-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/hands-wide-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_3",
+        "name": "shoulder-length-pushups",
+        "icon": "shoulder-length-pushups.png",
+        "description": "SHOULDER-LENGTH-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/shoulder-length-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/shoulder-length-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/shoulder-length-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_4",
+        "name": "slanting-pushups",
+        "icon": "slanting-pushups.png",
+        "description": "SLANTING-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/slanting-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/slanting-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/slanting-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_5",
+        "name": "holding-pushups",
+        "icon": "holding-pushups.png",
+        "description": "HOLDING-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/holding-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/holding-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/holding-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_6",
+        "name": "crocodile-pushups",
+        "icon": "crocodile-pushups.png",
+        "description": "CROCODILE-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/crocodile-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/crocodile-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/crocodile-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_7",
+        "name": "inclined-pushups",
+        "icon": "inclined-pushups.png",
+        "description": "INCLINED-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/inclined-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/inclined-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/inclined-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_8",
+        "name": "clapping-pushups",
+        "icon": "clapping-pushups.png",
+        "description": "CLAPPING-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/clapping-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/clapping-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/clapping-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "chest_9",
+        "name": "desi-pushups",
+        "icon": "desi-pushups.png",
+        "description": "DESI-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/desi-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/desi-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/desi-pushups.mp4",
+        "category": "chest",
+        "defaultExerciseLength": 30
+      }
+
+
+    ]
+  },
+  {
+    "catid": 2,
+    "catName": "triceps",
+    "break": {
+      "name": "30 Second Break",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/restbreak.mp4",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Break.mp3",
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/restbreak.jpg"
+    },
+    "workouts": [
+      {
+        "id": "triceps_1",
+        "name": "diamond_pushups",
+        "icon": "diamond_pushups.png",
+        "description": "DIAMOND-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/diamond_pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/diamond_pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/diamond_pushups.mp4",
+        "category": "triceps",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "triceps_2",
+        "name": "close-grip-pushups",
+        "icon": "close-grip-pushups.png",
+        "description": "CLOSE-GRIP-PUSHUPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/close-grip-pushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/close-grip-pushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/close-grip-pushups.mp4",
+        "category": "triceps",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "triceps_3",
+        "name": "triceps-dips",
+        "icon": "triceps-dips.png",
+        "description": "TRICEPS-DIPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/triceps-dips.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/triceps-dips.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/triceps-dips.mp4",
+        "category": "triceps",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "triceps_4",
+        "name": "skull-crushers",
+        "icon": "skull-crushers.png",
+        "description": "SKULL-CRUSHERS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/skull-crushers.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/skull-crushers.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/skull-crushers.mp4",
+        "category": "triceps",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "triceps_5",
+        "name": "triceps-extension",
+        "icon": "triceps-extension.png",
+        "description": "TRICEPS-EXTENSION",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/triceps-extension.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/triceps-extension.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/triceps-extension.mp4",
+        "category": "triceps",
+        "defaultExerciseLength": 30
+      }
+    ]
+  },
+  {
+    "catid": 3,
+    "catName": "legs",
+    "break": {
+      "name": "30 Second Break",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/restbreak.mp4",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Break.mp3",
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/restbreak.jpg"
+    },
+    "workouts": [
+      {
+        "id": "legs_1",
+        "name": "squats",
+        "icon": "squats.png",
+        "description": "SQUATS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/squats.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/squats.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/squats.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_2",
+        "name": "squats-jumps",
+        "icon": "squats-jumps.png",
+        "description": "SQUATS-JUMPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/squats-jumps.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/squats-jumps.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/squats-jumps.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_3",
+        "name": "lunges",
+        "icon": "lunges.png",
+        "description": "LUNGES",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/lunges.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/lunges.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/lunges.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_4",
+        "name": "split-lunges",
+        "icon": "split-lunges.png",
+        "description": "SPLIT-LUNGES",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/split-lunges.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/split-lunges.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/split-lunges.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_5",
+        "name": "frog_jumps",
+        "icon": "frog_jumps.png",
+        "description": "FROG-JUMPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/frog-jumps.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/frog-jumps.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/frog-jumps.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_6",
+        "name": "duck-walk",
+        "icon": "duck-walk.png",
+        "description": "DUCK-WALK",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/duck-walk.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/duck-walk.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/duck-walk.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_7",
+        "name": "toe-raises",
+        "icon": "toe-raises.png",
+        "description": "TOE-RAISES",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/toe-raises.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/toe-raises.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/toe-raises.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "legs_8",
+        "name": "toe-walk",
+        "icon": "toe-walk.png",
+        "description": "TOE-WALK",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/toe-walk.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/toe-walk.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/toe-walk.mp4",
+        "category": "legs",
+        "defaultExerciseLength": 30
+      }
+    ]
+  },
+  {
+    "catid": 4,
+    "catName": "shoulders",
+    "break": {
+      "name": "30 Second Break",
+      "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/restbreak.mp4",
+      "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/Break.mp3",
+      "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/restbreak.jpg"
+    },
+    "workouts": [
+      {
+        "id": "shoulders_1",
+        "name": "shouldersPushups",
+        "icon": "shouldersPushups.png",
+        "description": "SHOULDER PUSH-UPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/shouldersPushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/shouldersPushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/shouldersPushups.mp4",
+        "category": "shoulders",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "shoulders_2",
+        "name": "pikePushups",
+        "icon": "pikePushups.png",
+        "description": "PIKE PUSH-UPS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/pikePushups.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/pikePushups.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/pikePushups.mp4",
+        "category": "shoulders",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "shoulders_3",
+        "name": "plankCircles",
+        "icon": "plankCircles.png",
+        "description": "PLANK CIRCLES",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/plankCircles.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/plankCircles.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/plankCircles.mp4",
+        "category": "shoulders",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "shoulders_4",
+        "name": "one hand holds",
+        "icon": "onehandholds.png",
+        "description": "ONE HAND HOLDS",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/split-lunges.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/split-lunges.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/split-lunges.mp4",
+        "category": "shoulders",
+        "defaultExerciseLength": 30
+      },
+      {
+        "id": "shoulders_5",
+        "name": "head-stand-walk",
+        "icon": "head-stand-walk.png",
+        "description": "HEAD-STAND-WALK",
+        "image": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/images/1080/first-frame/head-stand-walk.jpg",
+        "audio": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/Audio/EN/head-stand-walk.mp3",
+        "video": "https://s3.amazonaws.com/m.sworkit.com/assets/exercises/v2/videos/1080/head-stand-walk.mp4",
+        "category": "shoulders",
+        "defaultExerciseLength": 30
+      }
+    ]
+  }
+
+]

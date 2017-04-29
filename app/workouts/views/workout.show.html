@@ -1,0 +1,65 @@
+<section class="workout-show-header">
+    <div class="head-content-wrapper">
+        <div class="left">
+            <!--<div class="left-1">-->
+                <!--<span id="back">-->
+                  <!--<svg class="icon" ng-click="app.goBack()">-->
+                      <!--<use xlink:href="#arrow"></use>-->
+                  <!--</svg>-->
+                <!--</span>-->
+            <!--</div>-->
+            <div class="left-2">
+                <p class="view-title-bigger">{{ workoutShow.workoutData.workoutName }} Routine</p>
+                <p class="sub-heading"> {{ workoutShow.currentExercises.length }} Exercises</p>
+                <a ng-if="workoutShow.firebaseId" ui-sref="player.custom.edit({ workoutId: workoutShow.workoutData.workoutId, workout: workoutShow.workoutData, firebaseId: workoutShow.firebaseId })" class="button edit-btn">Edit</a>
+                <a ui-sref="player.workout.play({ workoutId: workoutShow.workoutData.workoutId })" class="button begin-btn hvr-sweep">Begin Workout</a>
+            </div>
+        </div>
+        <!--<div class="right">-->
+            <!--<a ng-if="workoutShow.firebaseId" ui-sref="player.custom.edit({ workoutId: workoutShow.workoutData.workoutId, workout: workoutShow.workoutData, firebaseId: workoutShow.firebaseId })" class="button edit-btn">Edit</a>-->
+            <!--<a ui-sref="player.workout.play({ workoutId: workoutShow.workoutData.workoutId })" class="button begin-btn hvr-sweep">Begin Workout</a>-->
+        <!--</div>-->
+    </div>
+</section>
+<div id="workout-show-container" class="showscroll">
+
+    <div ng-show="workoutShow.modalVidPlaying" id="modal-box" outside-click="workoutShow.closeModal()">
+        <div id="vid-container">
+            <span id="seek-back" ng-click="workoutShow.prevVid()">
+              <svg class="icon" style="fill:white;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#skip"></use></svg>
+            </span>
+
+            <label id="video-name">{{workoutShow.modalExerciseName}}</label>
+            <span id="close-video" ng-click="ex.closeModal()">
+                <svg class="icon" style="fill:white;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+            </span>
+            <video id="preview-vid" autoplay loop muted webkit-playsinline preload>
+                <source ng-src="{{workoutShow.currentVidSrc | trusted}}" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <span id="seek-forward" ng-click="workoutShow.nextVid()">
+                <svg class="icon ff" style="fill:white;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#skip"></use></svg>
+            </span>
+        </div>
+    </div>
+
+
+    <div id="workout-container">
+        <div class="setup-workout">
+            <div id="setup-workout">
+                <div class="setup-exercises">
+                    <ul id="exercise-list">
+                        <li ng-repeat="exercise in workoutShow.currentExercises track by $index" class="block" ng-cloak>
+                            <img ng-src="{{exercise.image}}" />
+                            <span>
+                                  <svg class="play-icon" id="play-modal" ng-click="workoutShow.playVideoModal(exercise)">
+                                      <use xlink:href="#play"></use>
+                                  </svg>
+                            </span>
+                            <label class="exercise-label">{{ exercise.name }}</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

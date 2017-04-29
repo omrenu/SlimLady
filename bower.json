@@ -1,0 +1,24 @@
+{
+  "name": "SlimLady",
+  "description": "",
+  "main": "server/server.js",
+  "authors": [
+    "ripu daman <rdmahesh22@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mean",
+    "node",
+    "express",
+    "mongo",
+    "api",
+    "REST"
+  ],
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

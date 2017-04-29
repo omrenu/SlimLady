@@ -1,0 +1,13 @@
+
+<!--
+The main screen
+#featured is the top section showing large format exercises
+it scrolls horizontally to show more
+
+#secondary is the bottom section divided into two sub sections
+-->
+<div id="thescreen" ng-class="{'fullScreen':workingOut}">
+    <!-- Loading Animation Directive -->
+    <div loader ng-show="loading"></div>
+    <div ui-view></div>
+</div>

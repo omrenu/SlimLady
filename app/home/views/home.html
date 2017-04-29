@@ -1,0 +1,39 @@
+<div id="homescreen" class="underbar full scroll">
+
+    <div id="secondary">
+
+        <!-- STANDARD WORKOUTS -->
+
+        <div class="standard">
+
+            <a ng-repeat="category in home.dashboard.categories track by $index"  ui-sref="player.workout.show({workoutId: category.name })">
+                <div style="background-image: url(./assets/img/{{category.name}}-color.jpg);">
+                    <span>{{ category.name}}</span>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--<div id="homescreen" class="underbar full scroll">-->
+
+    <!--<div id="secondary">-->
+
+        <!--&lt;!&ndash; STANDARD WORKOUTS &ndash;&gt;-->
+
+        <!--<div class="standard">-->
+
+            <!--<a ng-repeat="category in home.dashboard.categories" ui-sref="player.categories.category({categoryId: category.name })">-->
+                <!--<div style="background-image: url(./assets/img/{{category.name}}-color.jpg);">-->
+                    <!--<span>{{ category.name}}</span>-->
+                <!--</div>-->
+            <!--</a>-->
+
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->

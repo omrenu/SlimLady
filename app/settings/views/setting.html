@@ -1,0 +1,56 @@
+<div class="view-container" id="setting-container">
+
+  <ul id="setting-list">
+
+      <li class="block" ng-cloak>
+          <div class="calorieTrackTitle">
+              <strong>CALORIE TRACKING</strong>
+          </div>
+      </li>
+      <li class="block-body" ng-cloak>
+          <div class="calorieTrackBody">
+              <label>Weight</label>
+              <input class="inputRight"  type="number" ng-model="settings.calorieData.weight" ng-change="settings.changeWeight()" required />
+          </div>
+          <div class="calorieTrackBody">
+          <label>Units</label>
+          <select class="inputRight" name="singleSelect" ng-model="settings.calorieData.unit"  ng-change="settings.changeUnit()">
+              <option ng-repeat="unit in settings.selects" value="{{unit.unitValue}}">{{unit.unitValue}}</option>
+          </select><br>
+          </div>
+      </li>
+
+      <li class="block" ng-cloak>
+          <div class="calorieTrackTitle">
+              <strong>Personal Goals</strong>
+          </div>
+      </li>
+      <li class="block-body" ng-cloak>
+          <div class="calorieTrackBody">
+              <label>Daily</label>
+              <input class="inputRight"  type="number" ng-model="settings.personalGoalData.dailyGoal" ng-change="settings.changeDailyGoal()" required />
+          </div>
+          <div class="calorieTrackBody">
+              <label>Weekly <span> (Mon-Sun) </span></label>
+              <input class="inputRight"  type="number" ng-model="settings.personalGoalData.weeklyGoal" ng-change="settings.changeWeeklyGoal()" required />
+          </div>
+      </li>
+      <li class="saveBody" ng-cloak>
+          <div class="saveButton">
+              <button class=" button hvr-sweep" ng-click="settings.saveData()">Save</button>
+          </div>
+      </li>
+      <!--<li class="block" ng-cloak>-->
+          <!--<div id="personalGoalTitle">-->
+
+          <!--</div>-->
+      <!--</li>-->
+      <!--<li class="block" ng-cloak>-->
+          <!--<div id="personalGoalBody">-->
+
+          <!--</div>-->
+      <!--</li>-->
+
+  </ul>
+
+</div>

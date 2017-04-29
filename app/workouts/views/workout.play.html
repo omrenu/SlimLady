@@ -1,0 +1,286 @@
+<div class="time-wrapper" ng-if="!workout.timeChosen">
+    <div class="time-container">
+        <div class="choose-time">
+
+            <!--<div class="row time-header">-->
+                <!--<p class="view-title-big">{{ workout.workoutName }} Routine</p>-->
+            <!--</div>-->
+
+            <div class="time-select">
+                <div class="row card-title">
+                    <span>How Many Minutes?</span>
+                </div>
+                <div class="setup-time">
+                    <circular-progress stroke="#FF8614" stroke-width="8" complete="{{workout.selectedPercentage}}" background="#DDD" linecap="round">
+                        <div class="timer-center">
+                            <div class="timer-text">
+                                <input type="tel" integer value="{{workout.workoutLength}}" ng-change="workout.validateTime()" ng-focus="workout.clearTime()" ng-blur="workout.validateTime()" ng-model="workout.workoutLength">
+                            </div>
+                        </div>
+                    </circular-progress>
+                </div>
+                <div class="time-controls minus-circle" ng-class="{'disabled': workout.workoutLength <= workout.defaultToAdd}" ng-click="workout.minusFive()">
+                    <svg class="icon">
+                        <use xlink:href="#subtract"></use>
+                    </svg>
+                </div>
+                <div class="time-controls plus-circle" ng-class="{'inactive': workout.workoutLength > 55}" ng-click="workout.plusFive()">
+                    <svg class="icon">
+                        <use xlink:href="#add"></use>
+                    </svg>
+                </div>
+                <p>
+                    <button class="button hvr-sweep" ng-click="workout.beginWorkout()">Start Workout</button>
+                </p>
+                <p ng-if="!workout.showCustomIntervals && !workout.currentWorkout.isYogaSequence">
+                    <button class="button secondary-button" ng-click="workout.showCustomIntervals = !workout.showCustomIntervals">Set Custom Intervals</button>
+                </p>
+            </div>
+
+            <div class="custom-interval-options">
+                <div class="card-title" ng-if="workout.showCustomIntervals">
+                <span ng-click="workout.showCustomIntervals = !workout.showCustomIntervals">Custom Intervals</span>
+                <div>
+                    <div class="left">
+                        <p>Shuffle Exercises</p>
+                        <p>Transition Pause Length (secs)</p>
+                        <p>Exercise Length (secs)</p>
+                        <p>Rest Breaks</p>
+                        <p>Rest Break Frequency (after x exercises)</p>
+                        <p>Rest Break Length (secs)</p>
+                        <a class="link" ng-click="workout.resetAdvancedTiming()">Reset Custom Timing</a>
+                    </div>
+                    <div class="right">
+                        <form name="customTimings">
+                            <p class="timing-input">
+                                <input type="checkbox"
+                                       ng-model="workout.advancedTiming.randomizationOption.sync_value"
+                                       ng-change="workout.changeRandomizationOption()">
+                            </p>
+                            <p class="timing-input">
+                                <input type="number"
+                                       min="0"
+                                       max="120"
+                                       required
+                                       ng-minlength=0
+                                       ng-maxlength=120
+                                       ng-blur="workout.validateNumber('transitionTime')"
+                                       name="transitionTime"
+                                       ng-model="workout.advancedTiming.transitionTime.sync_value">
+                            </p>
+                            <p class="timing-input">
+                                <input type="number"
+                                       min="1"
+                                       max="120"
+                                       required
+                                       ng-minlength=1
+                                       ng-maxlength=120
+                                       ng-blur="workout.validateNumber('exerciseTime')"
+                                       name="exerciseTime"
+                                       ng-model="workout.advancedTiming.exerciseTime.sync_value">
+                            </p>
+                            <p class="timing-input">
+                                <input type="checkbox"
+                                       ng-model="workout.advancedTiming.restStatus.sync_value">
+                            </p>
+                            <p class="timing-input">
+                                <input type="number"
+                                       min="0"
+                                       max="120"
+                                       required
+                                       ng-minlength=0
+                                       ng-maxlength=120
+                                       ng-blur="workout.validateNumber('breakFreq')"
+                                       name="breakFreq"
+                                       ng-model="workout.advancedTiming.breakFreq.sync_value"
+                                       ng-disabled="!workout.advancedTiming.restStatus.sync_value">
+                            </p>
+                            <p class="timing-input">
+                                <input type="number"
+                                       min="0"
+                                       max="120"
+                                       required
+                                       ng-minlength=0
+                                       ng-maxlength=120
+                                       ng-blur="workout.validateNumber('breakTime')"
+                                       name="breakTime"
+                                       ng-model="workout.advancedTiming.breakTime.sync_value"
+                                       ng-disabled="!workout.advancedTiming.restStatus.sync_value">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!--<div class="clear-both">-->
+                <!--<div class="card-title">-->
+                    <!--<span>Coming Up...</span>-->
+                <!--</div>-->
+                <!--<ul class="first-four-list">-->
+                    <!--<li ng-repeat="workout in workout.firstFour track by $index">-->
+                        <!--<img src="{{workout[0].image}}" ng-mouseover="hoverOn()" ng-mouseleave="hoverOff()"/>-->
+                        <!--<div><span ng-show="hoverShow">{{ workout[0].name }}</span></div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>
+
+<div id="player" ng-show="workout.timeChosen && !workout.workoutFinished" class="underbar full bright" ng-class="{'withplaylist':workout.showPlaylist}">
+    <div class="dialog-backdrop" ng-cloak="{{ workout.confirmationShowing }}" ng-class="{'dialog-active':workout.confirmationShowing}">
+        <div class="dialog-confirm">
+            <p class="dialog-text">Are you done working out?</p>
+            <button class="button cancel-button" ng-click="workout.closeConfirmation(false)">Not yet</button>
+            <button class="button" ng-click="workout.closeConfirmation(true)">Yes, I'm done</button>
+        </div>
+    </div>
+    <div class="progress bar big">
+        <span ng-style="workout.progressBarTransform"></span>
+        <!-- Workout time remaining -->
+        <p>
+            {{ workout.secondsToHms(workout.currentWorkout.seconds) }}
+        </p>
+    </div>
+    <div id="top">
+        <!-- End Workout -->
+    <span ng-click="workout.confirmEndWorkout()">
+      <svg class="icon back">
+          <use xlink:href="#arrow_circle"></use>
+      </svg>
+      END
+    </span>
+        <!-- Exercise Name -->
+    <span>
+      {{ workout.currentExercise.name}}
+      <!-- Next exercise name -->
+      <span ng-show="showNextExercise">Next: {{ nextExercise.name }}</span>
+    </span>
+        <div id="timer">
+            <div>
+                <circular-progress ng-hide="workout.intervalBreak || workout.changeSidesBreak" stroke="#FF8614" stroke-width="8" complete="{{workout.arcNumber}}" background="white" linecap="round">
+                    <span ng-cloak>{{ workout.exerciseTimer }}</span>
+                </circular-progress>
+                <circular-progress ng-show="workout.intervalBreak || workout.changeSidesBreak" stroke="#14CEFF" stroke-width="8" complete="{{workout.arcNumber}}" background="white" linecap="round">
+                    <span ng-cloak class="break">{{ workout.exerciseTimer }}</span>
+                </circular-progress>
+            </div>
+        </div>
+    </div>
+    <div id="exercise">
+        <div id="movie">
+            <div id="video-overlay" ng-show="workout.paused"></div>
+            <video id="exercise-vid" align="center" loop muted webkit-playsinline preload poster="{{ workout.currentExercise.image }}">
+                <source ng-src="{{workout.currentExercise.video | trusted}}" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+
+        </div>
+    </div>
+    <div id="controls">
+        <!-- volume control -->
+    <span class="volume">
+      <svg class="icon" ng-hide="workout.muted" ng-click="workout.toggleMute()">
+          <use xlink:href="#audio"></use>
+      </svg>
+      <svg class="icon" ng-show="workout.muted" ng-click="workout.toggleMute()">
+          <use xlink:href="#mute"></use>
+      </svg>
+
+      <span class="level">
+         <input type="range" min="0" max="100" value="volume" ng-model="volume" />
+      </span>
+
+    </span>
+        <!-- Play Pause Skip -->
+    <span class="pps">
+      <svg class="icon {{ workout.workoutIndex > 1 ? '' : 'disabled' }}" ng-click="workout.previous()">
+          <use xlink:href="#skip"></use>
+      </svg>
+     <!--  <svg class="icon" ng-click="workout.togglePlay()">
+        <use xlink:href="{{ workout.paused ? '#play' : '#pause' }}"></use>
+      </svg> -->
+      <svg class="icon" ng-click="workout.togglePlay()">
+          <use xlink:href="{{ workout.paused || workout.intervalBreak ? '#play' : '#pause' }}"></use>
+      </svg>
+      <svg class="icon ff" ng-click="workout.next()">
+          <use xlink:href="#skip"></use>
+      </svg>
+    </span>
+        <!-- Repeat Shuffle More -->
+    <span class="rsm" ng-if="!hideForBeta">
+      <svg class="icon">
+          <use xlink:href="#repeat"></use>
+      </svg>
+      <svg class="icon">
+          <use xlink:href="#shuffle"></use>
+      </svg>
+      <span class="more" ng-class="{'show':workout.showMoreRSM}">
+        <svg class="icon">
+            <use xlink:href="#notes"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#options"></use>
+        </svg>
+      </span>
+      <svg class="icon" ng-click="workout.showMoreRSM = !workout.showMoreRSM">
+          <use xlink:href="#more"></use>
+      </svg>
+    </span>
+    </div>
+    <div id="playlist">
+        <div id="trigger" ng-click="workout.togglePlaylist()">
+            <span>Playlist</span>
+            <img id="playlist-logo" src="assets/images/SLlogo_1x.png" alt=""/>
+            <svg class="icon">
+                <use xlink:href="#arrow_circle"></use>
+            </svg>
+        </div>
+        <div id="thumbs" class="showscroll playlist-container">
+            <a ng-repeat="exercise in workout.currentExercises" ng-click="workout.goToExercise($index)" ng-class="{active: exercise.name === workout.currentExercise.name }">
+        <span>
+          <img ng-src="{{exercise.image}}" />
+          <svg class="icon">
+              <use xlink:href="#play"></use>
+          </svg>
+        </span>
+                <label>{{ exercise.name }}</label>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="view-container" id="workout-finished" ng-show="workout.workoutFinished">
+    <div class="view-card" id="results-card">
+        <div class="card-title">
+            <span>Great Swork!</span>
+        </div>
+
+        <div id="workout-results">
+            <div id="calories">
+                <div id="flame">
+                    <span id="calorie-number">{{ workout.totalCaloriesBurned }}</span>
+                </div>
+                <span>Calories</span>
+            </div>
+
+            <div id="center">
+
+                <span>in</span>
+
+            </div>
+
+            <div id="workout-time">
+                <div id="timer">
+                    <span id="time-number">{{ workout.totalTimeInMinutesRounded }}</span>
+                </div>
+                <span>Minutes</span>
+            </div>
+        </div>
+
+        <a ui-sref="player.home" class="button begin-btn hvr-sweep back-home">Back to Dashboard</a>
+
+    </div>
+</div>

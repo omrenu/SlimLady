@@ -1,0 +1,38 @@
+
+<div id="card-body">
+    <div ng-if="progress.stats.weekly.workouts">
+        <div id="sessions" class="row">
+            <span id="progress-stat-title" class="left">Total Workout Sessions:</span>
+            <span id="progress-stat" class="right"><span id="stat-focus">{{progress.stats.weekly.sessions}}</span> sessions</span>
+        </div>
+        <div id="duration" class="row">
+            <span id="progress-stat-title" class="left">Average Workout Duration:</span>
+            <span id="progress-stat" class="right"><span id="stat-focus">{{progress.stats.weekly.avgDuration.min}}</span>min
+            <span ng-if="progress.stats.weekly.avgDuration.sec">
+                                <span id="stat-focus">{{progress.stats.weekly.avgDuration.sec}}</span>sec
+            </span>
+            </span>
+        </div>
+        <div id="time" class="row">
+            <span id="progress-stat-title" class="left">Total Time Working Out:</span>
+            <span id="progress-stat" class="right">
+              <span ng-if="progress.stats.weekly.totalTime.hr">
+                <span id="stat-focus">{{progress.stats.weekly.totalTime.hr}}</span>hr
+              </span>
+              <span id="stat-focus">{{progress.stats.weekly.totalTime.min}}</span>min
+              <span ng-if="progress.stats.weekly.totalTime.sec">
+                <span id="stat-focus">{{progress.stats.weekly.totalTime.sec}}</span>seconds
+              </span>
+            </span>
+        </div>
+        <div id="calories" class="row">
+            <span id="progress-stat-title" class="left">Total Calories Burned:</span>
+            <span id="progress-stat" class="right"><span id="stat-focus">{{progress.stats.weekly.calories}}</span> calories</span>
+        </div>
+        <nvd3 options="progress.options" data="progress.stats.weekly.data"></nvd3>
+    </div>
+    <!-- If no workouts in log -->
+    <div class="row" ng-if="!progress.stats.weekly.workouts">
+        <span id="progress-stat-title">You have no workouts from the past week!</span>
+    </div>
+</div>

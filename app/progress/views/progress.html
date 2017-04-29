@@ -1,0 +1,23 @@
+<div class="progress-header" id="category-header">
+    <!--<h1 class="view-title">My Progress</h1>-->
+    <!--<div id="category-tabs">-->
+        <!--<ul id="categories">-->
+            <!--<li ui-sref="player.progress.all" ui-sref-active="active">All Time</li>-->
+            <!--<li ui-sref="player.progress.daily" ui-sref-active="active">Today</li>-->
+            <!--<li ui-sref="player.progress.weekly" ui-sref-active="active" >This Week</li>-->
+            <!--<li ui-sref="player.progress.monthly" ui-sref-active="active" >Past 30 Days</li>-->
+            <!--<li ui-sref="player.progress.workout-log" ui-sref-active="active">Workout Log</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <div class="row tabs-custom">
+        <div class="tab" ng-repeat="tab in progress.tabs"  ui-sref="{{tab.link}}"  ui-sref-active="active">{{tab.name}}</div>
+    </div>
+
+</div>
+<div id="progress-show-container" class="showscroll">
+    <div id="progress-container">
+        <div class="view-card progress-view" id="progress-card" ui-view></div>
+        <!-- initialize this view with 'all progress' tab -->
+    </div>
+
+</div>

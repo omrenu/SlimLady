@@ -1,0 +1,23 @@
+{
+  "name": "ng-circular-progress",
+  "description": "An Angular directive for creating responsive circular progress indicators.",
+  "main": "ng-circular-progress.js",
+  "authors": [
+    "Mark Garrigan <mark@markgarrigan.com> (http://markgarrigan.com)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "progress",
+    "directive"
+  ],
+  "homepage": "https://github.com/markgarrigan/ng-circular-progress",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

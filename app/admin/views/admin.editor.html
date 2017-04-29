@@ -1,0 +1,134 @@
+<div class="view-container" id="admin-container">
+
+   <form name="feedData">
+       <div class="catContainer">
+           <ul id="catList" class="admin-list">
+               <li class="block" ng-cloak>
+                   <div class="SectionTitle">
+                       <strong>Categories</strong>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="catogeryBody">
+                       <label>CatId</label>
+                       <input class="inputRight" name="catId" type="text" ng-model="admin.dataRow.categories.id"  required/>
+                   </div>
+                   <div class="catogeryBody">
+                       <label>name</label>
+                       <input class="inputRight" name="catName" type="text" ng-model="admin.dataRow.categories.name" ng-change="admin.bindCat()" required/>
+                   </div>
+               </li>
+               <!--<li class="block-body" ng-cloak>-->
+               <!--<div class="catogeryBody">-->
+               <!--<span class="checkspan">-->
+               <!--<button class="check inputRight" ng-click="admin.showWorkout = !admin.showWorkout">Set Workout-->
+               <!--</button>-->
+               <!--</span>-->
+               <!--</div>-->
+               <!--</li>-->
+           </ul>
+       </div>
+       <div class="workoutContainer">
+           <ul id="workoutTable" class="admin-list">
+               <li class="block" ng-cloak>
+                   <div class="SectionTitle">
+                       <strong>Workouts</strong>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="catogeryBody">
+                       <label>WorkoutId</label>
+                       <input class="inputRight" name="workoutId" type="text" ng-model="admin.dataRow.workouts.id"  required/>
+                   </div>
+                   <div class="workoutBody">
+                       <label>name</label>
+                       <input class="inputRight" type="text" ng-model="admin.dataRow.workouts.name" ng-change="admin.bindExcercise()" required/>
+                   </div>
+                   <div class="workoutBody">
+                       <label>Catgeory</label>
+                       <input class="inputRight" name="workoutCat" type="text" ng-model="admin.dataRow.workouts.category" readonly/>
+                   </div>
+                   <div class="workoutBody">
+                       <label>Image</label>
+                       <input class="inputRight" type="text" ng-model="admin.dataRow.workouts.workout_image" required=""/>
+                   </div>
+                   <!--<div class="workoutBody">-->
+                   <!--<button class="check inputRight" ng-click="admin.showBreak = !admin.showBreak">Set Break</button>-->
+                   <!--</div>-->
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="excerciseBody">
+                       <label>BreakName</label>
+                       <input class="inputRight" name="catName" type="text" ng-model="admin.dataRow.workouts.break.name" required/>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="excerciseBody">
+                       <label>video</label>
+                       <input class="inputRight" name="breakVideo" type="text" ng-model="admin.dataRow.workouts.break.video" required/>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="excerciseBody">
+                       <label>audio</label>
+                       <input class="inputRight" name="breakAudio" type="text" ng-model="admin.dataRow.workouts.break.audio" required/>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="excerciseBody">
+                       <label>image</label>
+                       <input class="inputRight" name="breakImage" type="text" ng-model="admin.dataRow.workouts.break.break_image" required/>
+                   </div>
+               </li>
+               <!--<li class="block-body" ng-cloak>-->
+               <!--<div class="workoutBody">-->
+               <!--<button class="check inputRight" ng-click="admin.showExcercise = !admin.showExcercise">Set Excercise-->
+               <!--</button>-->
+               <!--</div>-->
+               <!--</li>-->
+           </ul>
+       </div>
+       <div class="excerciseContainer">
+           <ul id="excerciseTable" class="admin-list">
+               <li class="block" ng-cloak>
+                   <div class="SectionTitle">
+                       <strong>Excercises</strong>
+                   </div>
+               </li>
+               <li class="block-body" ng-cloak>
+                   <div class="catogeryBody">
+                       <label>ExcerciseId</label>
+                       <input class="inputRight" name="excerciseId" type="text" ng-model="admin.dataRow.excercises.id"  required/>
+                   </div>
+                   <div class="excerciseBody">
+                       <label>Catogery</label>
+                       <input class="inputRight" name="workoutCat"  ng-model="admin.dataRow.excercises.workout_cat" type="text" readonly required/>
+                   </div>
+                   <div class="excerciseBody">
+                       <label>image</label>
+                       <input class="inputRight" name="excerciseImage" ng-model="admin.dataRow.excercises.ex_image" type="text" required/>
+                   </div>
+                   <div class="excerciseBody">
+                       <label>audio</label>
+                       <input class="inputRight" name="excerciseAudio" ng-model="admin.dataRow.excercises.audio" type="text" required/>
+                   </div>
+                   <div class="excerciseBody">
+                       <label>Video</label>
+                       <input class="inputRight" name="excerciseVideo" ng-model="admin.dataRow.excercises.video" type="text" required/>
+                   </div>
+               </li>
+           </ul>
+       </div>
+       <div class="buttonContainer">
+           <ul id="saveData" class="admin-list">
+               <li class="block-body">
+                   <div class="innerButton">
+                       <button class="button success large" ng-click="admin.saveData()" ng-disabled="feedData.$invalid">Save</button>
+                   </div>
+               </li>
+           </ul>
+       </div>
+
+   </form>
+
+</div>

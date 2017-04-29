@@ -1,0 +1,13 @@
+
+<div id="card-body">
+    <div ng-if="progress.userWorkouts">
+        <p class="activity" ng-repeat="workout in progress.userWorkouts | orderObjectBy:'created_on':true" ng-hide="workout.sync_isDeleted">
+            <strong>{{workout.minutes_completed}}</strong> minutes of <strong>{{ workout.type }}</strong> @ <strong>{{ workout.created_on }}</strong>
+            - {{ workout.calories }} calories burned <span ng-click="progress.deleteWorkout(workout)" ng-if="progress.showDelete" class="delete-btn"> Delete</span>
+        </p>
+    </div>
+    <!-- If no workouts in log -->
+    <div class="row" ng-if="!progress.userWorkouts">
+        <span id="progress-stat-title">You have no workouts logged yet. Get to Swork!</span>
+    </div>
+</div>

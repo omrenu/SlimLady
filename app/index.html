@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="SlimLady">
+<head lang="en">
+
+    <!-- Slim Lady App -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0"/>
+    <title>Slim Lady</title>
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="external/Font-Awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+
+</head>
+<body ng-controller="AuthCtrl as app">
+<div flash-message="8000" style="position: absolute;z-index:4000;"></div>
+<!-- Inject SVG for all icons -->
+<div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <defs><style>.cls-1,.cls-11{fill:#FFF;}.cls-1{clip-rule:evenodd;}.cls-2{clip-path:url(#clip-path);}.cls-3{clip-path:url(#clip-path-2);}.cls-4{clip-path:url(#clip-path-3);}.cls-5{clip-path:url(#clip-path-4);}.cls-6{clip-path:url(#clip-path-5);}.cls-7{clip-path:url(#clip-path-6);}.cls-8{clip-path:url(#clip-path-7);}.cls-9{clip-path:url(#clip-path-8);}.cls-10{clip-path:url(#clip-path-9);}.cls-12{fill:#221f1f;}</style><clipPath id="clip-path"><path class="cls-1" d="M-866.51,282a.94.94,0,0,1-.94-.94v-3.38a.94.94,0,0,1,.94-.94.94.94,0,0,1,.94.94V281a.94.94,0,0,1-.94.94"/></clipPath><clipPath id="clip-path-2"><path class="cls-1" d="M-866.51,325a.94.94,0,0,1-.94-.94v-3.38a.94.94,0,0,1,.94-.94.94.94,0,0,1,.94.94v3.38a.94.94,0,0,1-.94.94"/></clipPath><clipPath id="clip-path-3"><path class="cls-1" d="M-886.31,301.79h-3.38a.94.94,0,0,1-.94-.94.94.94,0,0,1,.94-.94h3.38a.94.94,0,0,1,.94.94.94.94,0,0,1-.94.94"/></clipPath><clipPath id="clip-path-4"><path class="cls-1" d="M-843.33,301.79h-3.38a.94.94,0,0,1-.94-.94.94.94,0,0,1,.94-.94h3.38a.94.94,0,0,1,.94.94.94.94,0,0,1-.94.94"/></clipPath><clipPath id="clip-path-5"><path class="cls-1" d="M-866.51,325A24.51,24.51,0,0,1-891,300.51,24.51,24.51,0,0,1-866.51,276,24.51,24.51,0,0,1-842,300.51,24.51,24.51,0,0,1-866.51,325m0-47.1a22.62,22.62,0,0,0-22.58,22.61,22.62,22.62,0,0,0,22.58,22.61,22.62,22.62,0,0,0,22.58-22.61,22.62,22.62,0,0,0-22.58-22.61"/></clipPath><clipPath id="clip-path-6"><path class="cls-1" d="M-863.43,300.51a3.08,3.08,0,0,1-3.08,3.08,3.08,3.08,0,0,1-3.08-3.08,3.08,3.08,0,0,1,3.08-3.08,3.08,3.08,0,0,1,3.08,3.08"/></clipPath><clipPath id="clip-path-7"><path class="cls-1" d="M-866.51,304.53a4,4,0,0,1-4-4,4,4,0,0,1,4-4,4,4,0,0,1,4,4,4,4,0,0,1-4,4m0-6.16a2.14,2.14,0,0,0-2.14,2.14,2.14,2.14,0,0,0,2.14,2.14,2.14,2.14,0,0,0,2.14-2.14,2.14,2.14,0,0,0-2.14-2.14"/></clipPath><clipPath id="clip-path-8"><path class="cls-1" d="M-877.17,312.12a.93.93,0,0,1-.67-.28.94.94,0,0,1-.09-1.23l9.18-12.15a.94.94,0,0,1,.69-.37.92.92,0,0,1,.73.27l3,3a1,1,0,0,1,.27.73.94.94,0,0,1-.37.69l-12.14,9.19A.93.93,0,0,1-877.17,312.12Zm9.28-11.66-4.44,5.87,5.87-4.44Z"/></clipPath><clipPath id="clip-path-9"><path class="cls-1" d="M-865,302.93a.94.94,0,0,1-.67-.28l-3-3a1,1,0,0,1-.27-.73.94.94,0,0,1,.37-.69l12.14-9.19a.94.94,0,0,1,1.23.08.94.94,0,0,1,.09,1.23l-9.18,12.15a1,1,0,0,1-.69.37Zm-1.53-3.8,1.43,1.43,4.44-5.88Z"/></clipPath>
+        </defs>
+        <symbol id="add" viewBox="0 0 138 138"><title>add</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(1.000000, 1.000000)"><path d="M68.5 136.7C30.9 136.7 0.3 106.1 0.3 68.5 0.3 30.9 30.9 0.3 68.5 0.3 106.1 0.3 136.7 30.9 136.7 68.5 136.7 106.1 106.1 136.7 68.5 136.7L68.5 136.7ZM68.5 4.4C33.2 4.4 4.4 33.2 4.4 68.5 4.4 103.8 33.2 132.6 68.5 132.6 103.8 132.6 132.6 103.8 132.6 68.5 132.6 33.2 103.8 4.4 68.5 4.4L68.5 4.4ZM97.6 66.3L70.4 66.3 70.4 39C70.4 37.9 69.5 37 68.4 37 67.3 37 66.4 37.9 66.4 39L66.4 66.3 39 66.3C37.9 66.3 37 67.2 37 68.3 37 69.4 37.9 70.3 39 70.3L66.3 70.3 66.3 97.6C66.3 98.7 67.2 99.6 68.3 99.6 69.4 99.6 70.3 98.7 70.3 97.6L70.3 70.4 97.6 70.4C98.7 70.4 99.6 69.5 99.6 68.4 99.7 67.2 98.8 66.3 97.6 66.3L97.6 66.3Z"/></g></g></symbol>
+        <symbol id="arrow" viewBox="0 0 138 138"><title>arrow</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M97.6 129.3C96.9 129.3 96.3 129 95.8 128.5L38.8 71.5C37.8 70.5 37.8 68.8 38.8 67.8L95.8 10.8C96.8 9.8 98.5 9.8 99.5 10.8 100.5 11.8 100.5 13.5 99.5 14.5L44.3 69.7 99.5 124.9C100.5 125.9 100.5 127.6 99.5 128.6 98.9 129.1 98.3 129.3 97.6 129.3L97.6 129.3Z"/></g></symbol>
+        <symbol id="arrow_circle" viewBox="0 0 138 138"><title>arrow_circle</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(1.000000, 1.000000)"><path d="M68.5 136.7C30.9 136.7 0.3 106.1 0.3 68.5 0.3 30.9 30.9 0.3 68.5 0.3 106.1 0.3 136.7 30.9 136.7 68.5 136.7 106.1 106.1 136.7 68.5 136.7L68.5 136.7ZM68.5 4.4C33.2 4.4 4.4 33.2 4.4 68.5 4.4 103.8 33.2 132.6 68.5 132.6 103.8 132.6 132.6 103.8 132.6 68.5 132.6 33.2 103.8 4.4 68.5 4.4L68.5 4.4ZM86.9 67L61.2 41.4C60.5 40.6 59.2 40.6 58.4 41.4 57.6 42.2 57.6 43.5 58.4 44.3L82.5 68.5 58.4 92.6C57.6 93.4 57.6 94.7 58.4 95.5 58.8 95.9 59.3 96.1 59.9 96.1 60.4 96.1 61 95.9 61.3 95.5L87 69.9C87.4 69.5 87.6 69 87.6 68.4 87.5 67.9 87.3 67.4 86.9 67L86.9 67Z"/></g></g>
+        </symbol>
+        <symbol id="audio" viewBox="0 0 138 138">
+            <title>audio</title>
+            <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="big-audio" sketch:type="MSLayerGroup" transform="translate(16.000000, 23.000000)">
+                    <path d="M40.4117647,17.2867814 L23.1568627,31.4722469 L3.60130719,31.4722469 C1.0130719,31.4722469 -1,33.498742 -1,36.1042357 L-1,56.8034354 C-1,59.4089291 1.0130719,61.4354241 3.60130719,61.4354241 L23.1568627,61.4354241 L40.4117647,75.6208897 C41.4183007,76.4893876 43,75.7656393 43,74.4628925 L43,18.5895282 C43,17.2867814 41.4183007,16.5630331 40.4117647,17.2867814 L40.4117647,17.2867814 Z" id="Path" sketch:type="MSShapeGroup"/>
+                    <path d="M60.0110926,20.0503948 L60.0110926,20.0503948 C58.688542,21.3314567 58.688542,23.3242197 59.8641425,24.6052816 C65.0073951,30.5835705 68.0933466,38.1276018 68.0933466,46.5256744 C68.0933466,54.923747 65.0073951,62.4677783 59.8641425,68.4460672 C58.688542,69.8694694 58.688542,71.7198921 60.0110926,73.0009541 L60.0110926,73.0009541 C61.4805933,74.4243562 63.8317945,74.282016 65.1543451,72.8586138 C71.3262482,65.7416032 75,56.4894893 75,46.5256744 C75,36.5618595 71.3262482,27.3097456 65.1543451,20.192735 C63.8317945,18.6269926 61.4805933,18.6269926 60.0110926,20.0503948 L60.0110926,20.0503948 Z" id="Path" sketch:type="MSShapeGroup"/>
+                    <path d="M100.593202,46.0279591 C100.593202,61.5614866 95.0406445,75.8005535 85.7863813,86.7315544 C84.647395,88.026015 84.7897683,89.8957915 85.9287546,91.0464231 L85.9287546,91.0464231 C87.2101141,92.3408838 89.4880866,92.3408838 90.6270728,90.9025942 C100.735576,78.8209617 107,63.1436052 107,46.0279591 C107,28.912313 100.877949,13.2349565 90.6270728,1.15332398 C89.3457133,-0.284965602 87.2101141,-0.428794561 85.9287546,1.00949503 L85.9287546,1.00949503 C84.7897683,2.16012669 84.647395,4.02990316 85.7863813,5.32436379 C94.8982712,16.2553646 100.593202,30.4944315 100.593202,46.0279591 L100.593202,46.0279591 Z" id="Path" sketch:type="MSShapeGroup"/>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="checkmark" viewBox="0 0 128 128"><title>checkmark</title>
+            <path d="M64 0c-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64zm29.688 36.313l5.906 5.375-45.406 50.5-23.875-23.875 5.688-5.719 17.906 17.906 39.781-44.188z"/><text x="0" y="143" font-size="5px" font-weight="bold" font-family="&apos;Helvetica Neue&apos;, Helvetica, Arial-Unicode, Arial, Sans-serif">Created by useiconic.com</text><text x="0" y="148" font-size="5px" font-weight="bold" font-family="&apos;Helvetica Neue&apos;, Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></symbol>
+        <symbol id="close" viewBox="0 0 20 20">
+            <!-- Generator: Sketch 3.6 (26304) - http://www.bohemiancoding.com/sketch -->
+            <title>Shape</title>
+            <desc>Created with Sketch.</desc>
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="Core" transform="translate(-380.000000, -44.000000)">
+                    <g id="cancel" transform="translate(380.000000, 44.000000)">
+                        <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 L10,0 Z M15,13.6 L13.6,15 L10,11.4 L6.4,15 L5,13.6 L8.6,10 L5,6.4 L6.4,5 L10,8.6 L13.6,5 L15,6.4 L11.4,10 L15,13.6 L15,13.6 Z" id="Shape"/>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="edit" viewBox="0 0 512 512">
+            <g>
+                <rect x="178.846" y="92.087" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 224.3476 631.1498)" width="128.085" height="354.049"/>
+                <path d="M471.723,88.393l-48.115-48.114c-11.723-11.724-31.558-10.896-44.304,1.85l-45.202,45.203l90.569,90.568l45.202-45.202
+            C482.616,119.952,483.445,100.116,471.723,88.393z"/>
+                <polygon points="64.021,363.252 32,480 148.737,447.979 	"/>
+            </g>
+        </symbol>
+        <symbol id="exercise" viewBox="0 0 138 138"><title>exercise</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M29 92.5L80.2 92.5C81.4 89.9 83.9 88 86.9 88 89.8 88 92.4 89.9 93.5 92.5L110 92.5 110 98.5 93.5 98.5C92.4 101.1 89.8 103 86.9 103 83.9 103 81.4 101.1 80.3 98.5L29 98.5M29 67.5L45.5 67.5C46.6 64.9 49.2 63 52.2 63 55.1 63 57.7 64.9 58.8 67.5L110 67.5 110 73.5 58.8 73.5C57.7 76.1 55.1 78 52.2 78 49.2 78 46.6 76.1 45.5 73.5L29 73.5M29 42.5L80.2 42.5C81.4 39.9 83.9 38 86.9 38 89.8 38 92.4 39.9 93.5 42.5L110 42.5 110 48.5 93.5 48.5C92.4 51.1 89.8 53 86.9 53 83.9 53 81.4 51.1 80.3 48.5L29 48.5"/></g></symbol>
+        <symbol id="home" viewBox="0 0 138 138"><title>exercise</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M113.6 37.2L116.4 34.4 119.2 37.2 124.5 31.9C125.7 30.7 125.7 28.8 124.5 27.6L118.7 21.8C117.5 20.6 115.6 20.6 114.4 21.8L109.1 27.1 111.9 29.9 109.2 32.6C99.9 24 87.8 18.4 74.4 17.2L74.4 12.8 79.9 12.8 79.9 5.5C79.9 3.8 78.6 2.5 76.9 2.5L61.3 2.5C59.6 2.5 58.3 3.8 58.3 5.5L58.3 12.8 63.7 12.8 63.7 17.2C33.4 19.9 9.7 45.3 9.7 76.2 9.7 108.9 36.2 135.5 69 135.5 101.8 135.5 128.3 109 128.3 76.2 128.3 61.3 122.7 47.6 113.6 37.2ZM69 129.4C39.6 129.4 15.8 105.6 15.8 76.2 15.8 46.8 39.6 23 69 23 98.4 23 122.2 46.8 122.2 76.2 122.2 105.6 98.4 129.4 69 129.4Z"/></g></symbol>
+        <symbol id="more" viewBox="0 0 512 512"><path d="M256 238c9.9 0 18 8.1 18 18s-8.1 18-18 18 -18-8.1-18-18S246.1 238 256 238M256 224c-17.7 0-32 14.3-32 32s14.3 32 32 32c17.7 0 32-14.3 32-32S273.7 224 256 224L256 224zM128.4 238c9.9 0 18 8.1 18 18s-8.1 18-18 18c-9.9 0-18-8.1-18-18S118.5 238 128.4 238M128.4 224c-17.7 0-32 14.3-32 32s14.3 32 32 32c17.7 0 32-14.3 32-32S146 224 128.4 224L128.4 224zM384 238c9.9 0 18 8.1 18 18s-8.1 18-18 18 -18-8.1-18-18S374.1 238 384 238M384 224c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32S401.7 224 384 224L384 224z"/></symbol>
+        <symbol id="move" viewBox="0 0 25 25">
+            <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+            <title>32</title>
+            <desc>Created with Sketch.</desc>
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="32">
+                    <rect id="Rectangle-1" x="4" y="4" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="11" y="4" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="18" y="4" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="4" y="18" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="11" y="18" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="18" y="18" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="4" y="11" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="11" y="11" width="3" height="3"/>
+                    <rect id="Rectangle-1" x="18" y="11" width="3" height="3"/>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="mute" viewBox="0 0 138 138">
+            <title>mute</title>
+            <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="big-mute" sketch:type="MSLayerGroup" transform="translate(16.000000, 40.000000)">
+                    <path d="M40.4117647,0.286781369 L23.1568627,14.4722469 L3.60130719,14.4722469 C1.0130719,14.4722469 -1,16.498742 -1,19.1042357 L-1,39.8034354 C-1,42.4089291 1.0130719,44.4354241 3.60130719,44.4354241 L23.1568627,44.4354241 L40.4117647,58.6208897 C41.4183007,59.4893876 43,58.7656393 43,57.4628925 L43,1.58952821 C43,0.286781369 41.4183007,-0.436966873 40.4117647,0.286781369 L40.4117647,0.286781369 Z" id="Path" sketch:type="MSShapeGroup"/>
+                    <g id="X" transform="translate(62.000000, 9.000000)" stroke="#000000" stroke-width="8" sketch:type="MSShapeGroup" stroke-linecap="round">
+                        <path d="M41,41 L9.00266703e-17,9.00266703e-17" id="Line"/>
+                        <path d="M40.6057692,40.6057692 L0.739700447,0.739700447" id="Line" transform="translate(20.500000, 20.500000) rotate(-270.000000) translate(-20.500000, -20.500000) "/>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        </symbol><symbol id="notes" viewBox="0 0 138 138"><title>notes</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M52.6 40.8C51.9 40.9 51.2 41.4 51.2 42.1L51.2 82.5C51.2 82.8 51.2 83.7 50.8 84.5 50.3 85.5 49.4 86.2 48.1 86.6 47.5 86.8 46.8 87 45.9 87.2 41.8 88.1 35 89.6 35 95.9 35 101.1 38.8 103.5 42 103.9 42.4 103.9 42.8 104 43.2 104 44.4 104 47.3 103.8 49.8 102.1 51.7 100.9 53.9 98.5 53.9 94.1L53.9 57.2 86.3 50.7 86.3 74.3C86.3 75 86.3 75.8 85.9 76.6 85.4 77.6 84.4 78.3 83.1 78.7 82.6 78.9 81.8 79.1 80.9 79.3 76.9 80.2 70.1 81.7 70.1 88 70.1 93.7 74.5 95.7 77.1 95.9 77.3 96 77.6 96 77.8 96 79.5 96 82.2 95.5 84.4 94.3 87.4 92.5 89 89.8 89 86.2L89 35.3C89 34.6 88.4 33.8 87.3 34 86.6 34.2 53.3 40.6 52.6 40.8Z"/></g></symbol>
+        <symbol id="pause" viewBox="0 0 138 138"><title>pause</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M56.7 109.1L36.2 109.1C35.6 109.1 35 108.6 35 107.9L35 30.2C35 29.6 35.5 29 36.2 29L56.6 29C57.2 29 57.8 29.5 57.8 30.2L57.8 108C57.8 108.6 57.3 109.1 56.7 109.1L56.7 109.1ZM102.2 109.1L81.7 109.1C81.1 109.1 80.5 108.6 80.5 107.9L80.5 30.2C80.5 29.6 81 29 81.7 29L102.2 29C102.8 29 103.4 29.5 103.4 30.2L103.4 108C103.3 108.6 102.8 109.1 102.2 109.1L102.2 109.1Z"/></g></symbol><symbol id="plans" viewBox="0 0 32 32"><title>plans</title><title>Artboard 6</title><path class="cls-11" d="M2.18,10.42V29.6H29.82V10.42Zm21.23,5.65-8.74,8.74a.82.82,0,0,1-1.16,0L9.1,20.44a.82.82,0,1,1,1.16-1.17l3.83,3.79,8.16-8.16a.82.82,0,0,1,1.16,1.17Z"/><path class="cls-11" d="M29.82,8.77V4.28H25.61V5.78a.82.82,0,1,1-1.65,0V4.28H8V5.78a.82.82,0,1,1-1.65,0V4.28H2.18V8.77Z"/><path class="cls-12" d="M30.64,2.64h-5V1.57a.82.82,0,1,0-1.65,0V2.64H8V1.57a.82.82,0,1,0-1.65,0V2.64h-5a.82.82,0,0,0-.82.82v27a.82.82,0,0,0,.82.82H30.64a.82.82,0,0,0,.82-.82v-27A.82.82,0,0,0,30.64,2.64ZM6.39,4.28V5.78A.82.82,0,1,0,8,5.78V4.28H24V5.78a.82.82,0,1,0,1.65,0V4.28h4.21V8.77H2.18V4.28ZM2.18,29.6V10.42H29.82V29.6Z"/><path class="cls-12" d="M22.25,14.91l-8.16,8.16-3.83-3.79A.82.82,0,1,0,9.1,20.44l4.41,4.37a.82.82,0,0,0,1.16,0l8.74-8.74a.82.82,0,0,0-1.16-1.17Z"/></symbol>
+        <symbol id="play" viewBox="0 0 138 138"><title>play</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(1.000000, 1.000000)"><path d="M68 136.1C30.5 136.1 0 105.5 0 68 0 30.5 30.5 0 68 0 105.5 0 136.1 30.5 136.1 68 136.1 105.5 105.6 136.1 68 136.1ZM68 2.5C31.9 2.5 2.5 31.9 2.5 68 2.5 104.2 31.9 133.6 68 133.6 104.2 133.6 133.6 104.2 133.6 68 133.6 31.9 104.2 2.5 68 2.5ZM56.3 91.1C56.1 91.1 55.8 91 55.6 90.9 55 90.7 54.6 90.2 54.6 89.7L54.6 46.4C54.6 45.8 55 45.3 55.6 45.1 56.2 44.9 56.9 44.9 57.4 45.2L92.2 66.9C92.6 67.2 92.9 67.6 92.9 68 92.9 68.5 92.6 68.9 92.2 69.1L57.4 90.8C57.1 91 56.7 91.1 56.3 91.1L56.3 91.1 56.3 91.1Z"/></g></g></symbol><symbol id="plus" viewBox="0 0 138 138"><title>plus</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(20.000000, 20.000000)"><path d="M48.9 98.4C46.1 98.4 43.7 96.9 43.7 95.1L43.7 2.9C43.7 1.1 46.1-0.4 48.9-0.4 51.7-0.4 54.1 1.1 54.1 2.9L54.1 95.1C54.1 96.9 51.7 98.4 48.9 98.4L48.9 98.4Z"/><path d="M3 54.5C1.2 54.5-0.3 52.1-0.3 49.3 -0.3 46.5 1.2 44.1 3 44.1L95.2 44.1C97 44.1 98.5 46.5 98.5 49.3 98.5 52.1 97 54.5 95.2 54.5L3 54.5Z"/></g></g></symbol>
+        <symbol id="profile" viewBox="0 0 138 138"><title>profile</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(4.000000, 3.000000)"><path d="M65 82.8C49.1 82.8 38 63.7 35.3 55.9 35.2 55.8 35 55.7 34.9 55.6 33.8 54.9 33.2 54.5 32.7 53.7 28.9 46.9 27.9 41.5 29.7 37.5 30.6 35.6 31.9 34.5 33 33.8 33 30.9 33.2 25.3 34.6 19.9 34.7 19.7 40.4-0.5 65-0.5 89.6-0.5 95.3 19.7 95.4 19.9 96.8 25.3 97.1 30.8 97.1 33.8 98.3 34.5 99.6 35.6 100.4 37.5 102.2 41.4 101.2 46.9 97.4 53.7 96.9 54.5 96.2 55 95.2 55.6 95.1 55.7 94.9 55.8 94.8 55.9 92 63.7 80.9 82.8 65 82.8L65 82.8ZM37.6 50.2C37.7 50.3 37.9 50.4 38 50.5 39.3 51.3 40.3 52 40.7 53.3 42.1 58.3 51.8 76.8 64.9 76.8 78 76.8 87.7 58.3 89.1 53.3 89.5 52 90.5 51.3 91.8 50.5 92 50.4 92.1 50.3 92.2 50.2 95.7 43.9 95.1 41 94.7 40.1 94.2 39 93.2 38.7 93.1 38.7 91.7 38.4 90.6 37 90.7 35.6 90.7 35.5 91.1 28.2 89.3 21.5 89.1 20.9 84.6 5.6 64.8 5.6 44.8 5.6 40.3 21.3 40.3 21.5 38.5 28.3 38.9 35.6 38.9 35.6 39 37.1 37.9 38.5 36.4 38.7 36.4 38.7 35.4 39 34.9 40.1 34.7 41 34.1 43.9 37.6 50.2L37.6 50.2Z"/><path d="M65 132.5C29 132.5 2.9 127 2.6 126.9 1.2 126.6 0.2 125.3 0.2 123.8 1.6 95 19.5 86.1 32.9 81.8 43.2 78.6 48.7 73.2 48.7 73.2 49.9 72 51.8 72.1 53 73.2 54.2 74.4 54.2 76.3 53 77.4 52.7 77.7 46.5 83.8 34.7 87.5 21.8 91.6 8.4 98.8 6.4 121.4 13.7 122.7 36 126.4 65 126.4 94 126.4 116.3 122.8 123.6 121.4 121.6 98.8 108.2 91.6 95.3 87.5 83.6 83.8 77.3 77.7 77 77.4 75.8 76.2 75.8 74.3 77 73.1 78.2 71.9 80.1 71.9 81.3 73.1 81.4 73.2 86.9 78.5 97.1 81.7 110.5 85.9 128.4 94.9 129.8 123.7 129.9 125.2 128.9 126.5 127.4 126.8 127.1 126.9 101 132.5 65 132.5L65 132.5Z"/></g></g></symbol>
+        <symbol id="progress" viewBox="0 0 138 138"><title>progress</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(13.000000, 24.000000)"><path d="M3.1 90.1C2.5 90.1 1.9 89.9 1.3 89.5 0 88.5-0.3 86.6 0.7 85.3L33.9 40C34.4 39.3 35.1 38.9 35.9 38.8 36.7 38.7 37.5 38.9 38.2 39.4L62.7 58.5 98.3 1.4C99.2 0 101-0.4 102.5 0.4 103.9 1.3 104.3 3.1 103.5 4.6L66.1 64.5C65.6 65.2 64.9 65.7 64.1 65.9 63.3 66.1 62.4 65.8 61.7 65.3L37 46 5.6 88.8C5 89.6 4.1 90.1 3.1 90.1L3.1 90.1Z"/><path d="M108.9 35.3C107.6 35.3 106.4 34.4 106 33.1L98.8 6.7 72.4 13.9C70.8 14.3 69.1 13.4 68.7 11.8 68.3 10.2 69.2 8.5 70.8 8.1L100.1 0.1C101.7-0.3 103.4 0.6 103.8 2.2L111.8 31.5C112.2 33.1 111.3 34.8 109.7 35.2 109.4 35.2 109.1 35.3 108.9 35.3L108.9 35.3Z"/></g></g></symbol><symbol id="repeat" viewBox="0 0 138 138"><title>repeat</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M60.8 48.6L76.8 48.6C77.5 48.6 78.3 48.6 79 48.7L79 55.3C79 55.7 79.5 56 79.8 55.7L86 50.8 92.2 45.8C92.5 45.6 92.5 45.2 92.2 45L79.8 35.1C79.5 34.8 79 35.1 79 35.5L79 41.6C78.3 41.5 77.6 41.5 76.8 41.5L60.8 41.5C45.5 41.5 33 53.9 33 69.3L33 69.3 40.1 69.3C40.2 57.8 49.4 48.6 60.8 48.6L60.8 48.6ZM97.4 69.2C97.4 80.6 88.2 89.8 76.8 89.8L60.8 89.8C60.1 89.8 59.3 89.8 58.6 89.7L58.6 83.1C58.6 82.7 58.1 82.4 57.8 82.7L51.6 87.6 45.4 92.6C45.1 92.8 45.1 93.2 45.4 93.4L57.8 103.3C58.1 103.6 58.6 103.3 58.6 102.9L58.6 96.8C59.3 96.9 60 96.9 60.8 96.9L76.8 96.9C92.1 96.9 104.6 84.4 104.6 69.1L97.4 69.1 97.4 69.2Z"/></g></symbol>
+        <symbol id="search" viewBox="0 0 138 138"><title>search</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M128.9 116.3L88.9 76.3C93.6 69.3 96.3 60.9 96.3 51.8 96.3 27.3 76.4 7.4 51.9 7.4 27.4 7.4 7.4 27.3 7.4 51.8 7.4 76.3 27.3 96.2 51.8 96.2 60.8 96.2 69.3 93.5 76.3 88.8L116.3 128.8C117.4 129.9 118.9 130.5 120.5 130.5 122.1 130.5 123.6 129.9 124.7 128.8L128.9 124.6C131.2 122.4 131.2 118.6 128.9 116.3ZM90.4 51.8C90.4 30.6 73.1 13.3 51.9 13.3 30.7 13.3 13.3 30.6 13.3 51.8 13.3 73 30.6 90.3 51.8 90.3 73 90.3 90.4 73.1 90.4 51.8ZM120.5 124.7L81.1 85.3C82.6 84 84 82.6 85.3 81.1L124.7 120.5 120.5 124.7Z"/></g></symbol><symbol id="search_2" viewBox="0 0 138 138"><title>search_2</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M116 58.1C116 26.3 90 0.6 58.2 1 27.4 1.5 2.4 26.5 2 57.3 1.5 89.2 27.2 115.1 59 115.1 71.5 115.1 83 111.1 92.5 104.2L122.2 133.9C125.7 137.4 131.4 137.4 134.8 133.9L134.8 133.9C138.3 130.5 138.3 124.8 134.8 121.3L105.1 91.6C112 82.2 116 70.7 116 58.1L116 58.1ZM59 97.3C37.4 97.3 19.7 79.6 19.7 58.1 19.7 36.5 37.4 18.8 59 18.8 80.5 18.8 98.2 36.5 98.2 58.1 98.2 79.7 80.6 97.3 59 97.3L59 97.3Z"/></g></symbol><symbol id="share" viewBox="0 0 138 138"><title>share</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M7.3 118.7C7 118.7 6.8 118.7 6.5 118.6 5.4 118.2 4.8 117.1 5 116 5.2 115.2 19.6 48.4 79.6 46.7L79.6 22.3C79.6 21.4 80.1 20.6 81 20.2 81.8 19.8 82.8 20 83.5 20.6L133.5 65.3C134 65.7 134.3 66.4 134.3 67 134.3 67.7 134 68.3 133.6 68.7L83.6 115C82.9 115.6 81.9 115.8 81.1 115.4 80.3 115 79.7 114.2 79.7 113.3L79.7 85.4C49 85.5 25.9 88.4 9.5 117.5 8.9 118.2 8.2 118.7 7.3 118.7L7.3 118.7Z"/></g></symbol>
+        <symbol id="shuffle" viewBox="0 0 138 138"><title>shuffle</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M96.4 48.9L96.4 55.2C96.4 55.5 96.8 55.7 97 55.5L103.5 50.3 110 45.1C110.2 45 110.2 44.7 110 44.5L97 34.1C96.8 33.9 96.4 34.1 96.4 34.4L96.4 40.9 96.4 41.5C81.7 43.4 72.9 52.9 65.1 63 64.1 64.3 63.2 65.5 62.2 66.8 61.6 67.5 61.1 68.3 60.5 69 52.3 79.7 44.1 89.3 29 89.6L29 96.9C46.7 96.7 56.4 86.2 65 75 66 73.7 66.9 72.5 67.9 71.2 68.5 70.5 69 69.7 69.6 69 76.9 59.5 84.3 50.8 96.4 48.9L96.4 48.9ZM55.9 63.1C56.1 62.9 56.2 62.6 56.4 62.4 57.7 60.7 59 58.9 60.4 57.2 52.8 48.4 43.7 41.3 29.1 41.1L29.1 48.4C41.3 48.6 49 55 55.9 63.1L55.9 63.1ZM110 92.9L97 82.5C96.8 82.3 96.4 82.5 96.4 82.8L96.4 89.2C86.8 87.6 80.2 82 74.3 74.9 74.1 75.1 74 75.4 73.8 75.6 72.5 77.3 71.2 79.1 69.8 80.8 76.5 88.6 84.5 95 96.4 96.5L96.4 96.5 96.4 103.5C96.4 103.8 96.7 104 97 103.8L103.5 98.6 110 93.4C110.2 93.3 110.2 93 110 92.9L110 92.9Z"/></g></symbol>
+        <symbol id="skip" viewBox="0 0 138 138"><title>skip</title><description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M63.2 103.3L14.9 71.1C13.7 70.3 13.7 68.5 14.9 67.7L63.9 34.3C65.2 33.5 66.9 34.4 66.9 35.9L66.1 101.5C66.2 103.1 64.5 104.1 63.2 103.3L63.2 103.3ZM121.2 103.3L73 71.1C71.8 70.3 71.8 68.5 73 67.7L122 34.3C123.3 33.5 125 34.4 125 35.9L124.2 101.5C124.2 103.1 122.5 104.1 121.2 103.3L121.2 103.3Z"/></g></symbol>
+        <symbol id="subtract" viewBox="-236 328 138 138">
+            <title>subtract</title>
+            <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+            <g>
+                <g transform="translate(1.000000, 1.000000)">
+                    <path d="M-167.5,464.7c-37.6,0-68.2-30.6-68.2-68.2s30.6-68.2,68.2-68.2s68.2,30.6,68.2,68.2S-129.9,464.7-167.5,464.7
+			L-167.5,464.7z M-167.5,332.4c-35.3,0-64.1,28.8-64.1,64.1s28.8,64.1,64.1,64.1s64.1-28.8,64.1-64.1S-132.2,332.4-167.5,332.4
+			L-167.5,332.4z M-138.4,394.3h-27.2h-4H-197c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2h27.3l3.9,0l27.4,0c1.1,0,2-0.8,2-1.9
+			C-136.3,395.2-137.2,394.3-138.4,394.3L-138.4,394.3z"/>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+</div>
+
+<div class="contentWrapper">
+        <section class="header" ng-if="(!app.workoutTitle && app.isHeaderVisble) ">
+            <div class="leftHeader">
+                <a ng-show="app.workoutTitle" href="javascript:history.back();" class="titleBack"><i class="fa fa-chevron-left"></i></a>
+                 <!--<a class="sideMenuTrigger" ng-click="setSidebar()"><i class="fa fa-bars"></i></a>-->
+            </div>
+            <div class="logo">
+                <img src="assets/images/SLlogo_1x.png">
+            </div>
+            <div class="rightHeader">
+            </div>
+        </section>
+        <section class="header" ng-if="(app.workoutTitle && app.isHeaderVisble)">
+            <div class="leftHeader">
+                <a href="javascript:history.back();" class="titleBack"><i class="fa fa-chevron-left"></i></a>
+                <!-- <a class="sideMenuTrigger" ng-click="setSidebar()"><i class="fa fa-bars"></i></a> -->
+            </div>
+            <div class="logo">
+                <strong>{{app.workoutTitle}}</strong>
+            </div>
+            <div class="rightHeader">
+            </div>
+        </section>
+
+        <!-- Main View -->
+        <div class="modal" ui-view>
+        </div>
+
+
+        <section class="footerMenu" ng-if="(loggedIn && app.isMenuVisible)">
+            <div class="homeFooter">
+                <a ui-sref="player.home" ui-sref-active="selected">
+                    <svg class="icon">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    <small>Home</small>
+                </a>
+            </div>
+            <div class="progressFooter">
+                <a ui-sref="player.progress" ui-sref-active="selected">
+                    <svg class="icon">
+                        <use xlink:href="#progress"></use>
+                    </svg>
+                    <small>Progress</small>
+                </a>
+            </div>
+            <div class="settingsFooter">
+                <a ui-sref="player.settings" ui-sref-active="selected">
+                <svg class="icon">
+                    <use xlink:href="#profile"></use>
+                </svg>
+                <small>Settings</small>
+               </a>
+            </div>
+            <div class="moreLink">
+                <a ui-sref="player.menu" ui-sref-active="selected">
+                    <svg class="icon">
+                        <use xlink:href="#more"></use>
+                    </svg>
+                    <small>More</small>
+                </a>
+            </div>
+        </section>
+        <!--<div id="dropdown-menu" ng-if="app.dropdown" class="animated-dropdown" outside-click="app.hideDropdown()" >-->
+            <!--<a ui-sref="player.user">Reminders-->
+                <!--<svg class="drop-icon"><use xlink:href="#profile"></use></svg>-->
+            <!--</a>-->
+            <!--<a ui-sref="player.home">Settings-->
+                <!--<svg class="drop-icon"><use xlink:href="#exercise"></use></svg>-->
+            <!--</a>-->
+            <!--<a ui-sref="auth" ng-click="app.logout()">Logout <span id="icon" class="drop-icon"></span></a>-->
+        <!--</div>-->
+
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyArSZliiRjHKUNK8FjCmcZ7_-NAMM7dj_I",
+        authDomain: "slimlady-8eb38.firebaseio.com",
+        databaseURL: " https://slimlady-8eb38.firebaseio.com",
+        storageBucket: "slimlady-8eb38.appspot.com",
+        messagingSenderId: "560078390635"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="external/jquery.js"></script>
+<script src="external/jquery.touchSwipe.js"></script>
+<script src="external/bower_components/angular/angular.js"></script>
+<script src="external/bower_components/angular-ui-router/angular-ui-router.js"></script>
+
+<script src="external/bower_components/angularfire/dist/angularfire.js"></script>
+<script src="external/bower_components/buzz/dist/buzz.js"></script>
+<script src="external/bower_components/ng-circular-progress/ng-circular-progress.js"></script>
+<script src="external/bower_components/moment/moment.js"></script>
+<script src="external/bower_components/underscore.js"></script>
+<script src="external/bower_components/sortable.js"></script>
+
+<script src="external/bower_components/d3/d3.js"></script>
+<script src="external/bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+<script src="external/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+<!-- Configure Route -->
+<script src="app.js"></script>
+<script src="app.routes.js"></script>
+<script src="app.config.js"></script>
+
+<!-- Directives -->
+<script src="components/directives/flash.directive.js"></script>
+<script src="components/directives/loader.directive.js"></script>
+<script src="components/directives/outsideclick.directive.js"></script>
+<script src="components/directives/validation.directive.js"></script>
+
+<!-- Controllers-->
+<script src="auth/controller/auth.controller.js"></script>
+<script src="users/controller/users.controller.js"></script>
+<script src="home/controller/home.controller.js"></script>
+<script src="categories/controller/categories.controller.js"></script>
+<script src="workouts/controller/workout.show.controller.js"></script>
+<script src="workouts/controller/workout.controller.js"></script>
+<script src="progress/controller/progress.controller.js"></script>
+<script src="settings/controller/settings.controller.js"></script>
+<script src="admin/controller/admin.controller.js"></script>
+
+    <!-- Services -->
+<script src="users/services/user.service.js"></script>
+<script src="auth/services/auth.service.js"></script>
+<script src="common/api.services.js"></script>
+<script src="common/util.services.js"></script>
+<script src="workouts/services/workout.service.js"></script>
+<script src="admin/services/admin.services.js"></script>
+
+<!-- Data -->
+<script src="data/data.js"></script>
+
+<!-- Filter -->
+<script src="components/filter.js"></script>
+
+
+</body>
+</html>
